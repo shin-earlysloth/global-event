@@ -1,10 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import useTimeOut from "./hooks/useTimeOut";
 
 function App() {
+  const { minutes, second } = useTimeOut();
+
   return (
     <div className="App">
+      {minutes}:{second}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +22,8 @@ function App() {
         >
           Learn React
         </a>
+        <button>테스트 버튼</button>
+        <input />
       </header>
     </div>
   );
